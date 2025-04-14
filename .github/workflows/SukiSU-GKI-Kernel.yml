@@ -24,7 +24,7 @@ jobs:
         sudo mkdir -p /mnt/kernel_workspace
         sudo chmod 0777 /mnt/kernel_workspace
         cd /mnt/kernel_workspace
-        git clone https://github.com/izsdeaman97/GKI-Kernelsu-susfs --depth=1
+        git clone https://github.com/teap1108/GKI--susfs --depth=1
 
     - name: Download source code
       run: |
@@ -114,7 +114,7 @@ jobs:
           
           # Remove check_defconfig
            sed -i 's/check_defconfig//' ./common/build.config.gki
-           sed -i '$s|echo "\$res"|echo "\$res-g716498f88d0f-ab11695701"|' ./common/scripts/setlocalversion
+           sed -i '$s|echo "\$res"|echo "\$res-Tea_Signature"|' ./common/scripts/setlocalversion
            
     - name: Config BBR
       run: |
